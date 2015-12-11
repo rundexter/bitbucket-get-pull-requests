@@ -4,23 +4,54 @@
 {
     //Required. Inputs the module expects.
     "inputs": [
-        //e.g.
-        /*
         {
-            "id": "from",
-            "title":"From"
+            "id": "owner",
+            "title":"Owner"
+        },
+        {
+            "id": "repo_slug",
+            "title":"Repo Slug"
+        },
+        {
+            "id": "state",
+            "title":"State"
         }
-        */
     ],
     //Required. Outputs the module emits.
     "outputs": [
-      //e.g.
-      /*
         {
-            "id": "from",
-            "title":"From"
+            "id": "id",
+            "title":"ID"
+        },
+        {
+            "id": "state",
+            "title":"State"
+        },
+        {
+            "id": "title",
+            "title":"Title"
+        },
+        {
+            "id": "description",
+            "title":"Description"
+        },
+        {
+            "id": "url",
+            "title":"URL"
+        },
+        {
+            "id": "author",
+            "title":"Author"
+        },
+        {
+            "id": "repository",
+            "title":"Repo Name"
+        },
+        {
+            "id": "branch",
+            "title":"Branch Name"
         }
-      */
     ],
+    "icon": "bitbucket",
     "title": "Bitbucket Get Pull Requests" /* Required.A display name for the module */
 }
