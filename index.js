@@ -84,18 +84,18 @@ module.exports = {
      */
     run: function(step, dexter) {
 
-        var auth = this.authParams(dexter),
-            formData = {},
-            owner = step.input('owner').first(),
-            repo_slug = step.input('repo_slug').first();
+        var auth = this.authParams(dexter);
+        // check params.
+        if (!this.checkCorrectParams(auth, step)) return;
+
+        var formData = {},
+            owner = step.input('owner').first().trim(),
+            repo_slug = step.input('repo_slug').first().trim();
 
         if (step.input('state').first())
             formData.state = step.input('state').first();
 
         var uriLink = 'repositories/' + owner + '/' + repo_slug + '/pullrequests';
-
-        // check params.
-        if (!this.checkCorrectParams(auth, step)) return;
         //send API request
         request.get({url: uriLink, qs: formData, auth: auth, json: true}, function (error, responce, body) {
 
