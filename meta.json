@@ -52,6 +52,9 @@
             "title":"Branch Name"
         }
     ],
+    "providers": [{
+        "name": "bitbucket"
+    }],
     "icon": "bitbucket",
     "title": "Bitbucket Get Pull Requests" /* Required.A display name for the module */
 }
